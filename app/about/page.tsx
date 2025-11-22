@@ -1,4 +1,3 @@
-import { ImageWithFallback } from '@/components/ImageWithFallback';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Sparkles, ArrowLeft, Heart, Code, Gem, Mail, Github, Facebook, Instagram } from 'lucide-react';
