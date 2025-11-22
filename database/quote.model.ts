@@ -1,6 +1,7 @@
 import { Schema, model, models, Document } from "mongoose";
 
 export interface IQuote extends Document {
+  id?: string
   text: string;
   author: string;
   category: string;
