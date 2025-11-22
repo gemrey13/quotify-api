@@ -10,7 +10,7 @@ const DeveloperProfile = () => {
         <div className="grid md:grid-cols-2 gap-0">
           <div className="relative h-full min-h-[400px]">
             <Image
-              src="https://images.unsplash.com/photo-1737575655055-e3967cbefd03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjM3Mjk0NzN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src="/GemPic.png"
               alt="Developer"
               className="w-full h-full object-cover"
               fill
@@ -29,7 +29,7 @@ const DeveloperProfile = () => {
             <h2 className="text-4xl mb-4 bg-linear-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
               Meet the Developer
             </h2>
-            <h3 className="text-2xl mb-4 text-slate-700">Your Name</h3>
+            <h3 className="text-2xl mb-4 text-slate-700">Code with Gem</h3>
             <p className="text-slate-600 mb-4 text-lg leading-relaxed">
               I'm a solo developer passionate about creating tools that make developers' lives
               easier. Quotify was born from my own need for a simple, reliable quotes API.
@@ -48,13 +48,13 @@ const DeveloperProfile = () => {
               <p className="text-sm text-slate-500 mb-3">Connect with me:</p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="mailto:yourname@example.com"
+                  href="mailto:gemreyranola@gmal.com"
                   className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors shadow-md">
                   <Mail className="w-4 h-4" />
                   Email
                 </a>
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/gemrey13"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors shadow-md">
@@ -62,7 +62,7 @@ const DeveloperProfile = () => {
                   GitHub
                 </a>
                 <a
-                  href="https://facebook.com/yourusername"
+                  href="https://www.facebook.com/codewgem"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-md">
@@ -70,7 +70,7 @@ const DeveloperProfile = () => {
                   Facebook
                 </a>
                 <a
-                  href="https://instagram.com/yourusername"
+                  href="https://www.instagram.com/codewgem"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 bg-linear-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-colors shadow-md">
@@ -78,7 +78,7 @@ const DeveloperProfile = () => {
                   Instagram
                 </a>
                 <a
-                  href="https://tiktok.com/@yourusername"
+                  href="https://www.tiktok.com/@codewgem"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors shadow-md">
