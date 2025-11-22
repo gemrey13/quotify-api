@@ -1,7 +1,3 @@
-import { Code } from "lucide-react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import HeroSection from "@/pages/Home/HeroSection";
 import FeaturesSection from "@/pages/Home/FeaturesSection";
 import UseCasesSection from "@/pages/Home/UseCasesSection";
