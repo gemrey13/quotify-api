@@ -24,7 +24,7 @@ const Contact = () => {
               Send Feedback
             </Button>
           </Link>
-          <a href="mailto:yourname@example.com">
+          <a href="mailto:gemreyranola@gmail.com">
             <Button
               size="lg"
               variant="outline"
