@@ -4,7 +4,6 @@ import Mission from "@/pages/About/Mission";
 import SupportProject from "@/pages/About/SupportProject";
 import Values from "@/pages/About/Values";
 
-
 function About() {
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-50 via-blue-50 to-indigo-50 ">
