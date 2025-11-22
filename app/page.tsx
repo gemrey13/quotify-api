@@ -1,8 +1,8 @@
-import { BookOpen, Code, Sparkles, Zap, Globe, Shield, RefreshCw } from "lucide-react";
+import { Code, Sparkles, Zap, Globe, Shield, RefreshCw } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import HeroSection from "@/section/HeroSection";
+import HeroSection from "@/pages/Home/HeroSection";
 
 function Home() {
   return (
