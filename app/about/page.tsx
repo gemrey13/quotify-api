@@ -1,7 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import Contact from '@/pages/About/Contact';
 import DeveloperProfile from '@/pages/About/DeveloperProfile';
 import Mission from '@/pages/About/Mission';
+import Values from '@/pages/About/Values';
 import { Sparkles, ArrowLeft, Heart, Code, Gem, Mail, Github, Facebook, Instagram } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -35,81 +37,10 @@ function About() {
           <DeveloperProfile />
 
           {/* Values Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-linear-to-br from-white to-blue-50">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
-                  <Sparkles className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-2xl mb-3 text-slate-900">Simplicity First</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Great APIs should be intuitive and require minimal setup. No unnecessary complexity, just clean and efficient code.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-linear-to-br from-white to-green-50">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 bg-linear-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
-                  <Heart className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-2xl mb-3 text-slate-900">Always Free</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Access to inspiration shouldn't have a price tag. Quotify will always be free for all developers.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-linear-to-br from-white to-purple-50">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 bg-linear-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
-                  <Code className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-2xl mb-3 text-slate-900">Developer Experience</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Excellent documentation, consistent responses, and helpful error messages are at the core of everything.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-linear-to-br from-white to-indigo-50">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 bg-linear-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
-                  <Gem className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-2xl mb-3 text-slate-900">AI-Powered Development</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Built with Gemini AI, demonstrating how solo developers can create professional-grade applications.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          <Values />
 
           {/* Contact Section */}
-          <Card className="border-0 shadow-2xl bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden relative">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxIDAgNiAyLjY5IDYgNnMtMi42OSA2LTYgNi02LTIuNjktNi02IDIuNjktNiA2LTZ6TTI0IDQyYzMuMzEgMCA2IDIuNjkgNiA2cy0yLjY5IDYtNiA2LTYtMi42OS02LTYgMi42OS02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNSIgb3BhY2l0eT0iLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-50"></div>
-            <CardContent className="p-10 text-center relative">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-linear-to-br from-blue-500 to-indigo-600 rounded-2xl mb-6 shadow-xl">
-                <Mail className="w-10 h-10" />
-              </div>
-              <h2 className="text-4xl mb-4">Let's Connect</h2>
-              <p className="text-slate-300 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
-                Have questions, suggestions, or just want to say hello? I'd love to hear from you. Your feedback helps make Quotify better for everyone.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link href="/feedback">
-                  <Button size="lg" className="bg-linear-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-lg">
-                    Send Feedback
-                  </Button>
-                </Link>
-                <a href="mailto:yourname@example.com">
-                  <Button size="lg" variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 shadow-lg">
-                    Email Me
-                  </Button>
-                </a>
-              </div>
-            </CardContent>
-          </Card>
+          <Contact />
 
           {/* Support the Project */}
           <Card className="border-0 shadow-xl bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50">
