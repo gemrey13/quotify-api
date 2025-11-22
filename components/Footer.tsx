@@ -27,7 +27,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          <p className="text-slate-500 text-sm">© 2024 Quotify. All rights reserved.</p>
+          <p className="text-slate-500 text-sm">© 2025 Quotify. All rights reserved.</p>
         </div>
       </div>
     </footer>
