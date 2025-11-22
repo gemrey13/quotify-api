@@ -1,33 +1,32 @@
 "use client";
 
-import { useState } from 'react';
-import { Sparkles, ArrowLeft, CheckCircle } from 'lucide-react';
-import Link from 'next/link';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { CheckCircle } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 
 function Feedback() {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    type: 'feedback' as 'feedback' | 'quote-request',
-    message: ''
+    name: "",
+    email: "",
+    type: "feedback" as "feedback" | "quote-request",
+    message: "",
   });
 
   function submitFeedback(data: typeof formData) {
     // Simulate sending data to an API endpoint
-    console.log('Submitting feedback:', data);
+    console.log("Submitting feedback:", data);
   }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     submitFeedback(formData);
     setSubmitted(true);
-    setFormData({ name: '', email: '', type: 'feedback', message: '' });
+    setFormData({ name: "", email: "", type: "feedback", message: "" });
     setTimeout(() => setSubmitted(false), 5000);
   };
 
@@ -46,13 +45,14 @@ function Feedback() {
       {/* Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-2xl mx-auto">
-          
           {submitted && (
             <div className="mb-8 p-6 bg-green-50 border border-green-200 rounded-lg flex items-center gap-3">
               <CheckCircle className="w-6 h-6 text-green-600 shrink-0" />
               <div>
                 <h3 className="text-green-900 mb-1">Thank you for your submission!</h3>
-                <p className="text-green-700">We appreciate your feedback and will review it soon.</p>
+                <p className="text-green-700">
+                  We appreciate your feedback and will review it soon.
+                </p>
               </div>
             </div>
           )}
@@ -61,12 +61,12 @@ function Feedback() {
             <CardHeader>
               <h2 className="text-3xl">Submit Your Feedback</h2>
               <p className="text-slate-600 mt-2">
-                Whether you have suggestions for improvement, want to report an issue, or would like to request a specific quote to be added to our collection, we're here to listen.
+                Whether you have suggestions for improvement, want to report an issue, or would like
+                to request a specific quote to be added to our collection, we're here to listen.
               </p>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
-                
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="space-y-2">
                     <Label htmlFor="name">Your Name</Label>
@@ -98,8 +98,12 @@ function Feedback() {
                     id="type"
                     className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     value={formData.type}
-                    onChange={(e) => setFormData({ ...formData, type: e.target.value as 'feedback' | 'quote-request' })}
-                  >
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        type: e.target.value as "feedback" | "quote-request",
+                      })
+                    }>
                     <option value="feedback">General Feedback</option>
                     <option value="quote-request">Quote Request</option>
                   </select>
@@ -107,7 +111,7 @@ function Feedback() {
 
                 <div className="space-y-2">
                   <Label htmlFor="message">
-                    {formData.type === 'quote-request' ? 'Quote Details' : 'Your Message'}
+                    {formData.type === "quote-request" ? "Quote Details" : "Your Message"}
                   </Label>
                   <Textarea
                     id="message"
@@ -116,17 +120,16 @@ function Feedback() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder={
-                      formData.type === 'quote-request'
+                      formData.type === "quote-request"
                         ? 'Please provide the quote text, author, and category (if known). Example:\n\n"Quote text here"\n- Author Name\nCategory: Motivation'
-                        : 'Share your thoughts, suggestions, or report any issues you\'ve encountered...'
+                        : "Share your thoughts, suggestions, or report any issues you've encountered..."
                     }
                   />
                 </div>
 
                 <Button type="submit" size="lg" className="w-full">
-                  Submit {formData.type === 'quote-request' ? 'Quote Request' : 'Feedback'}
+                  Submit {formData.type === "quote-request" ? "Quote Request" : "Feedback"}
                 </Button>
-
               </form>
             </CardContent>
           </Card>
@@ -163,11 +166,12 @@ function Feedback() {
             <CardContent className="p-6">
               <h3 className="mb-2 text-slate-900">Privacy Notice</h3>
               <p className="text-slate-600 text-sm">
-                Your feedback is important to us. We only use the information you provide to respond to your submission and improve our service. We do not share your personal information with third parties or use it for marketing purposes.
+                Your feedback is important to us. We only use the information you provide to respond
+                to your submission and improve our service. We do not share your personal
+                information with third parties or use it for marketing purposes.
               </p>
             </CardContent>
           </Card>
-
         </div>
       </div>
     </div>
